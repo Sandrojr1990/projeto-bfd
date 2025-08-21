@@ -14,11 +14,16 @@ function pergunta(questao) {
 }
 
 async function perguntarNome() {
-    const primeiroNome = await pergunta("Qual seu nome?");
-    const ultimoNome = await pergunta("Qual é seu sobrenome?");
+    const idade = await pergunta('Qual é a sua idade?');
 
-    console.log(`Olá, ${primeiroNome} ${ultimoNome}`);
-        
+    switch(idade) {
+        case idade < 18:
+            console.log('Você é menor de idade.');
+        case idade > 60:
+            console.log('Você é idoso.');
+        default:
+            console.log('Você é só um adulto.');
+    }      
 
 
 }
