@@ -14,11 +14,13 @@ function pergunta(questao) {
 }
 
 async function perguntarIdade() {
-    const idade = await pergunta('Qual é a sua idade?');
+    let idade = await pergunta('Qual é a sua idade?');
 
-    for (let i = 1; i<= idade; i++) {
-        console.log(`Num determinado ano você fez ${i} anos`)
+    while(idade <= 10) {
+        console.log(`Número: ${idade}`);
+        idade++;
     }
+    console.log(`Você tem chegou ao fim: ${idade} anos!`);
 }
 
 perguntarIdade();
