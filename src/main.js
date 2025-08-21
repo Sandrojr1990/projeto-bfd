@@ -16,12 +16,8 @@ function pergunta(questao) {
 async function perguntarIdade() {
     const idade = await pergunta('Qual é a sua idade?');
 
-    if(idade < 18) {
-        console.log('Você é menor de idade.');
-    } else if(idade > 60) {
-        console.log('Você é idoso.');
-    } else {
-        console.log('Você é só um adulto.');
+    for (let i = 1; i<= idade; i++) {
+        console.log(`Num determinado ano você fez ${i} anos`)
     }
 }
 
