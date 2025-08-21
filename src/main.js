@@ -14,11 +14,16 @@ function pergunta(questao) {
 }
 
 async function perguntarIdade() {
-    const frutas = ["maçã", "banana", "uva"];
-
-    for (let fruta of frutas) {
-        console.log(`A fruta é ${fruta}`);
+    let pessoa = {
+        nome: "Ana",
+        idade: 25,
+        cidade: "Recife"
     }
+
+    for (let k in pessoa){
+        console.log(`${k} + ${pessoa[k]}`)
+    }
+    
     rl.close();
 }
 
