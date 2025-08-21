@@ -19,8 +19,10 @@ async function perguntarNome() {
     switch(idade) {
         case idade < 18:
             console.log('Você é menor de idade.');
+            break;
         case idade > 60:
             console.log('Você é idoso.');
+            break;
         default:
             console.log('Você é só um adulto.');
     }      
