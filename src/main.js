@@ -13,23 +13,18 @@ function pergunta(questao) {
     })
 }
 
-async function perguntarNome() {
+async function perguntarIdade() {
     const idade = await pergunta('Qual é a sua idade?');
 
-    switch(idade) {
-        case idade < 18:
-            console.log('Você é menor de idade.');
-            break;
-        case idade > 60:
-            console.log('Você é idoso.');
-            break;
-        default:
-            console.log('Você é só um adulto.');
-    }      
-
-
+    if(idade < 18) {
+        console.log('Você é menor de idade.');
+    } else if(idade > 60) {
+        console.log('Você é idoso.');
+    } else {
+        console.log('Você é só um adulto.');
+    }
 }
 
-perguntarNome();
+perguntarIdade();
 
 
