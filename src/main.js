@@ -16,10 +16,10 @@ function pergunta(questao) {
 async function perguntarIdade() {
     let idade = await pergunta('Qual é a sua idade?');
 
-    while(idade <= 10) {
+    do {
         console.log(`Número: ${idade}`);
         idade++;
-    }
+    } while (idade < 5);
     console.log(`Você tem chegou ao fim: ${idade} anos!`);
 }
 
