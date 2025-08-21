@@ -14,13 +14,12 @@ function pergunta(questao) {
 }
 
 async function perguntarIdade() {
-    let idade = await pergunta('Qual é a sua idade?');
+    const frutas = ["maçã", "banana", "uva"];
 
-    do {
-        console.log(`Número: ${idade}`);
-        idade++;
-    } while (idade < 5);
-    console.log(`Você tem chegou ao fim: ${idade} anos!`);
+    for (let fruta of frutas) {
+        console.log(`A fruta é ${fruta}`);
+    }
+    rl.close();
 }
 
 perguntarIdade();
