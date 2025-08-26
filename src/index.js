@@ -10,23 +10,23 @@ let notas = [];
 let perguntas = ['digite a primeira nota:', 'digite a segunda nota:', 'digite a terceira nota:,'];
 
 // função para perguntar as notas
-function perguntar(i) {
+function perguntar(i) {}
     if (i < perguntas.length) {
       rl.question(perguntas[i], (resposta) =>{
         let nota = parseFloat(resposta);
 
     if (isNaN(nota)[ nota < 0, nota > 10]) {
       console.log("❌ Por favor, digite um número válido entre 0 e 10.");
-      perguntarNota(i); // Repete a pergunta
+      perguntar(i); // Repete a pergunta
     } else{
       notas.push(nota);
       perguntar(i + 1);
     }
-  });
-  } else {
+     });
+     } else {
     calcularMedia();
-  }
-}
+  
+     }
 // função para calcular a média e mostra resultado
 function calcularMedia() {
     let media = (notas[1] + notas[2] + notas[3]) / 3;
@@ -42,4 +42,4 @@ function calcularMedia() {
     }
     
      perguntar(0);
-     
+
