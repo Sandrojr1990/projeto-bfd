@@ -1,19 +1,12 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
-/// Programa inicial, do projeto BFD.
-
-app.get('/', (req, res) => {
-    console.log("Requisição realizada");
-    res.send("Hello World! Estou no GET");
+const readline = require('readline');
+const prompt = readline.createInterface({
+    input:process.stdin, output: process.stdout
 })
-
-app.post('/', (req, res) => {
-    console.log("Requisição realizada / Entrei no POST");
-    res.send("Hello World! Estou no POST");
-})
-
-app.listen(PORT, () => {
-    console.log(`Olá, mundo! App online na porta: ${PORT}`);
-})
+function perguntar(perguta) {
+    return new promise((resolve) => {
+        prompt.question(pergunta, (resposta) => {
+            const valor = Number(resposta.replace(',',','));
+            resolve(valor);
+        })
+    })
+}
