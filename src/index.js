@@ -42,4 +42,5 @@ function calcularMedia() {
     }
     
      perguntar(0);
+     
 
